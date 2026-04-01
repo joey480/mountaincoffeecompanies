@@ -122,14 +122,23 @@ section {
   }
 
   .navbar-brand {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: #fff;
-    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
 
     &:hover {
-      color: $mc2-cream;
+      opacity: 0.9;
+    }
+
+    .navbar-logo {
+      height: 40px;
+      width: auto;
+      display: block;
+
+      @media (max-width: 767.98px) {
+        height: 32px;
+      }
     }
   }
 
