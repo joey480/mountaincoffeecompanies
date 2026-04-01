@@ -160,44 +160,6 @@
     </div>
   </footer>
 
-  <!-- TEMPORARY: Logo Color Preview Toolbar — remove after selection -->
-  <div id="logo-color-toolbar" style="position:fixed;bottom:0;left:0;right:0;background:#1D3F57;border-top:3px solid #BF895A;padding:1rem 1.5rem;z-index:9999;display:flex;align-items:center;justify-content:center;gap:0.75rem;flex-wrap:wrap;">
-    <span style="color:#F5F1E8;font-family:'Montserrat',sans-serif;font-size:0.8rem;font-weight:600;letter-spacing:0.05em;margin-right:0.5rem;">LOGO COLOR:</span>
-    <button onclick="setLogoColor('cream')" style="background:#F5F1E8;color:#1D3F57;border:2px solid #F5F1E8;padding:0.4rem 1rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;">Cream</button>
-    <button onclick="setLogoColor('white')" style="background:#fff;color:#1D3F57;border:2px solid #fff;padding:0.4rem 1rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;">White</button>
-    <button onclick="setLogoColor('moss')" style="background:#4E7A35;color:#fff;border:2px solid #4E7A35;padding:0.4rem 1rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;">Moss</button>
-    <button onclick="setLogoColor('glacier')" style="background:#5CA3C9;color:#fff;border:2px solid #5CA3C9;padding:0.4rem 1rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;">Glacier</button>
-    <button onclick="setLogoColor('roast')" style="background:#BF895A;color:#fff;border:2px solid #BF895A;padding:0.4rem 1rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;">Roast</button>
-    <button onclick="setLogoColor('primary')" style="background:#2E7BA6;color:#fff;border:2px solid #2E7BA6;padding:0.4rem 1rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;">Primary Blue</button>
-    <button onclick="setLogoColor('original')" style="background:transparent;color:#F5F1E8;border:2px solid #F5F1E8;padding:0.4rem 1rem;border-radius:4px;font-family:'Montserrat',sans-serif;font-size:0.75rem;font-weight:600;cursor:pointer;">Original</button>
-  </div>
-  <script>
-    // CSS filter presets to colorize the black logo to each brand color
-    const logoFilters = {
-      cream:    'brightness(0) invert(1) sepia(0.1) saturate(0.5) hue-rotate(15deg) brightness(0.96)',
-      white:    'brightness(0) invert(1)',
-      moss:     'brightness(0) invert(0.44) sepia(1) saturate(3) hue-rotate(60deg) brightness(0.85)',
-      glacier:  'brightness(0) invert(0.55) sepia(1) saturate(3) hue-rotate(170deg) brightness(1.1)',
-      roast:    'brightness(0) invert(0.55) sepia(1) saturate(3) hue-rotate(350deg) brightness(1.05)',
-      primary:  'brightness(0) invert(0.45) sepia(1) saturate(4) hue-rotate(175deg) brightness(0.95)',
-      original: 'none'
-    };
-    function setLogoColor(color) {
-      const logo = document.querySelector('.navbar-logo');
-      if (logo) {
-        logo.style.filter = logoFilters[color] || 'none';
-        logo.style.transition = 'filter 0.3s ease';
-      }
-      // Highlight active button
-      document.querySelectorAll('#logo-color-toolbar button').forEach(btn => {
-        btn.style.outline = 'none';
-        btn.style.outlineOffset = '0';
-      });
-      event.target.style.outline = '3px solid #fff';
-      event.target.style.outlineOffset = '2px';
-    }
-  </script>
-
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
